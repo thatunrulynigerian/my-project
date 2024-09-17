@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #92c7d1;
+    --main-gray: #303841;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+    background-color: black;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-blue);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+    z-index: 10;
+}
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+.nav-list a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+ul {
+    list-style: none;
+}
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+}
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+.project-title {
+    font-size: 1.2rem;
+    padding: 2rem 0.5rem;
+}
+
+.project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
+}
+footer {
+    font-weight: 300;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: black;
+    border-top: 4px solid var(--main-blue);
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    background-color: #e74c3c; /* Red background color for smaller screens */
+  }
+}
+
+nav a:hover {
+  color: #ff69b4; /* Pink color when hovered */
+}
